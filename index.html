@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elena García · soyelenagarcia</title>
-  <meta name="description" content="Community Manager y Editora de vídeo. Ayudo a negocios y creadores a crecer en redes con contenido que conecta de verdad." />
+  <meta name="description" content="Community Manager y Editora de vídeo. Contenido que conecta. Comunidad que crece." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -22,7 +22,6 @@
     body { background: var(--white); font-family: 'Jost', sans-serif; color: var(--black); }
     .site { max-width: 640px; margin: 0 auto; min-height: 100vh; }
 
-    /* HERO */
     .hero { background: var(--cream); padding: 2.5rem 2rem 1.5rem; border-bottom: 0.5px solid var(--gray-light); }
     .hero-inner { display: flex; align-items: center; gap: 1.25rem; }
     .avatar { width: 68px; height: 68px; border-radius: 50%; background: var(--terra); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 22px; color: var(--white); flex-shrink: 0; }
@@ -30,21 +29,18 @@
     .hero-handle { font-size: 12px; color: var(--terra); font-weight: 400; letter-spacing: 0.05em; margin-top: 2px; }
     .hero-tagline { font-size: 13px; color: var(--gray); font-weight: 300; margin-top: 4px; line-height: 1.5; }
 
-    /* NAV */
     .nav { display: flex; background: var(--white); border-bottom: 0.5px solid var(--gray-light); overflow-x: auto; scrollbar-width: none; }
     .nav::-webkit-scrollbar { display: none; }
     .nav-pill { font-size: 13px; font-weight: 400; padding: 14px 18px; border: none; border-bottom: 2px solid transparent; color: var(--gray); cursor: pointer; white-space: nowrap; font-family: 'Jost', sans-serif; background: transparent; transition: all 0.2s; }
     .nav-pill.active { color: var(--terra); border-bottom-color: var(--terra); font-weight: 500; }
     .nav-pill:hover { color: var(--terra); }
 
-    /* SECTIONS */
     .section { padding: 2rem; display: none; }
     .section.active { display: block; }
     .section-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; color: var(--terra); text-transform: uppercase; margin-bottom: 6px; }
     .section-title { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--black); font-weight: 600; line-height: 1.3; margin-bottom: 1rem; }
     .section-body { font-size: 14px; color: var(--gray); line-height: 1.7; font-weight: 300; }
 
-    /* LINKS */
     .links { display: flex; flex-direction: column; gap: 10px; margin-top: 1.5rem; }
     .link-row { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border: 0.5px solid var(--gray-light); border-radius: 12px; color: var(--black); transition: all 0.2s; background: var(--white); cursor: pointer; text-decoration: none; }
     .link-row:hover { border-color: var(--terra); background: var(--cream); }
@@ -54,7 +50,6 @@
     .link-sub { font-size: 12px; color: var(--gray); font-weight: 300; margin-top: 2px; }
     .link-arrow { font-size: 18px; color: var(--terra-soft); }
 
-    /* SERVICE TABS */
     .service-tabs-label { font-size: 12px; color: var(--gray); font-weight: 300; margin-bottom: 10px; margin-top: 1.5rem; }
     .service-tabs { display: flex; gap: 8px; margin-bottom: 1.5rem; flex-wrap: wrap; }
     .stab { font-size: 12px; padding: 8px 16px; border-radius: 8px; border: 0.5px solid var(--gray-light); color: var(--gray); cursor: pointer; font-family: 'Jost', sans-serif; background: var(--white); transition: all 0.2s; font-weight: 400; }
@@ -63,33 +58,34 @@
     .service-grid { display: none; flex-direction: column; gap: 12px; }
     .service-grid.active { display: flex; }
 
-    /* PACK CARDS */
     .pack-card { border: 0.5px solid var(--gray-light); border-radius: 14px; overflow: hidden; background: var(--white); }
     .pack-card.featured { border: 1.5px solid var(--terra); }
     .pack-header { padding: 16px 18px 14px; background: var(--cream); display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
     .pack-card.featured .pack-header { background: var(--terra); }
     .pack-name { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--black); }
-    .pack-card.featured .pack-name { color: var(--white); }
+    .pack-card.featured .pack-name { color: #FFFFFF; font-weight: 600; }
     .pack-subtitle { font-size: 12px; color: var(--gray); margin-top: 3px; font-weight: 300; }
-    .pack-card.featured .pack-subtitle { color: rgba(255,255,255,0.7); }
-    .pack-badge { font-size: 10px; font-weight: 500; letter-spacing: 0.05em; padding: 3px 9px; border-radius: 10px; background: rgba(255,255,255,0.25); color: var(--white); white-space: nowrap; }
+    .pack-card.featured .pack-subtitle { color: #FFFFFF; opacity: 1; }
+    .pack-badge { font-size: 10px; font-weight: 500; letter-spacing: 0.05em; padding: 3px 9px; border-radius: 10px; background: rgba(255,255,255,0.3); color: #FFFFFF; white-space: nowrap; }
     .pack-price { font-size: 22px; font-weight: 600; color: var(--terra); font-family: 'Playfair Display', serif; text-align: right; }
-    .pack-card.featured .pack-price { color: var(--white); }
+    .pack-card.featured .pack-price { color: #FFFFFF; }
     .pack-price-sub { font-size: 12px; font-weight: 300; color: var(--gray); font-family: 'Jost', sans-serif; text-align: right; }
-    .pack-card.featured .pack-price-sub { color: rgba(255,255,255,0.7); }
+    .pack-card.featured .pack-price-sub { color: #FFFFFF; opacity: 1; }
     .pack-body { padding: 14px 18px; }
     .pack-includes { display: flex; flex-direction: column; gap: 7px; }
     .pack-item { font-size: 13px; color: var(--gray); display: flex; align-items: center; gap: 9px; font-weight: 300; }
     .pack-item::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--terra-soft); flex-shrink: 0; }
+    .pack-card.featured .pack-body .pack-item { color: var(--gray) !important; }
+    .pack-card.featured .pack-body .pack-item::before { background: var(--terra-soft) !important; }
+    .pack-card.featured .pack-badge { color: #FFFFFF; }
+    .pack-card.featured .pack-body { background: var(--white); }
 
-    /* CTA BLOCK */
     .cta-block { margin-top: 1.75rem; background: var(--cream); border-radius: 12px; padding: 1.25rem 1.5rem; border: 0.5px solid var(--gray-light); }
     .cta-block-title { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--black); margin-bottom: 6px; }
     .cta-block-sub { font-size: 13px; color: var(--gray); font-weight: 300; line-height: 1.6; margin-bottom: 12px; }
     .btn-cta { display: inline-block; padding: 10px 20px; background: var(--terra); color: var(--white); border-radius: 8px; font-size: 13px; font-weight: 500; font-family: 'Jost', sans-serif; cursor: pointer; border: none; transition: background 0.2s; }
     .btn-cta:hover { background: var(--black); }
 
-    /* FORMS */
     .form-group { margin-bottom: 14px; }
     .form-group label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: var(--gray); text-transform: uppercase; display: block; margin-bottom: 6px; }
     .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 11px 14px; border: 0.5px solid var(--gray-light); border-radius: 8px; font-size: 14px; font-family: 'Jost', sans-serif; color: var(--black); background: var(--white); outline: none; transition: border-color 0.2s; }
@@ -102,7 +98,6 @@
     .form-success-title { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--black); margin-bottom: 8px; }
     .form-success-sub { font-size: 13px; color: var(--gray); font-weight: 300; line-height: 1.6; }
 
-    /* FOOTER */
     .footer { padding: 1.5rem 2rem; border-top: 0.5px solid var(--gray-light); background: var(--cream); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     .footer-name { font-size: 12px; color: var(--gray); font-weight: 300; }
     .social-row { display: flex; gap: 10px; }
@@ -119,7 +114,7 @@
       <div>
         <div class="hero-name">Elena García</div>
         <div class="hero-handle">@soyelenagarcia</div>
-        <div class="hero-tagline">Tu presencia digital, en buenas manos</div>
+        <div class="hero-tagline">Community Manager · Editora de vídeo</div>
       </div>
     </div>
   </div>
@@ -133,15 +128,15 @@
 
   <!-- INICIO -->
   <div class="section active" id="sec-inicio">
-    <div class="section-eyebrow">Community Manager · Editora de vídeo · Asistente Virtual</div>
-    <h1 class="section-title">Hola, soy Elena.<br>Gestiono tu presencia digital.</h1>
-    <p class="section-body">Ayudo a negocios y creadores a crecer en redes con contenido que conecta de verdad. Me encargo de estrategia, diseño, publicación y edición — para que tú te centres en lo tuyo.</p>
+    <div class="section-eyebrow">Community Manager · Editora de vídeo</div>
+    <h1 class="section-title">Contenido que conecta.<br>Comunidad que crece.<br>Yo me encargo.</h1>
+    <p class="section-body">Ayudo a negocios y creadores a tener una presencia digital real — con estrategia, contenido y edición de vídeo. Sin improvisar, sin perder el tiempo.</p>
     <div class="links">
       <div class="link-row" onclick="showSection('servicios',1)">
         <div class="link-icon"><svg width="18" height="18" fill="none" stroke="#C4622D" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
         <div class="link-content">
           <div class="link-title">Ver servicios y precios</div>
-          <div class="link-sub">Community Management · Edición de vídeo · Asistente Virtual</div>
+          <div class="link-sub">Community Management · Edición de vídeo · Packs combinados</div>
         </div>
         <span class="link-arrow">›</span>
       </div>
@@ -180,9 +175,10 @@
     <p class="service-tabs-label">Selecciona una categoría:</p>
     <div class="service-tabs">
       <button class="stab active" onclick="showPacks('cm',this)">Community Manager</button>
-      <button class="stab" onclick="showPacks('av',this)">Asistente Virtual</button>
       <button class="stab" onclick="showPacks('combo',this)">Packs Combinados</button>
     </div>
+
+    <!-- CM -->
     <div class="service-grid active" id="packs-cm">
       <div class="pack-card">
         <div class="pack-header">
@@ -200,9 +196,9 @@
           <div style="text-align:right"><div class="pack-badge">Más popular</div><div class="pack-price" style="margin-top:5px;">420€</div><div class="pack-price-sub">/mes</div></div>
         </div>
         <div class="pack-body"><div class="pack-includes">
-          <div class="pack-item" style="color:#F5F0E8">Reels incluidos</div>
-          <div class="pack-item" style="color:#F5F0E8">Calendario editorial</div>
-          <div class="pack-item" style="color:#F5F0E8">Métricas básicas mensuales</div>
+          <div class="pack-item">Reels incluidos</div>
+          <div class="pack-item">Calendario editorial</div>
+          <div class="pack-item">Métricas básicas mensuales</div>
         </div></div>
       </div>
       <div class="pack-card">
@@ -217,70 +213,45 @@
         </div></div>
       </div>
     </div>
-    <div class="service-grid" id="packs-av">
-      <div class="pack-card">
-        <div class="pack-header">
-          <div><div class="pack-name">Esencial</div><div class="pack-subtitle">10h/mes</div></div>
-          <div><div class="pack-price">220€</div><div class="pack-price-sub">/mes</div></div>
-        </div>
-        <div class="pack-body"><div class="pack-includes">
-          <div class="pack-item">Correo, agenda y Drive</div>
-          <div class="pack-item">Tareas simples de soporte</div>
-        </div></div>
-      </div>
-      <div class="pack-card featured">
-        <div class="pack-header">
-          <div><div class="pack-name">Crecimiento</div><div class="pack-subtitle">18h/mes</div></div>
-          <div style="text-align:right"><div class="pack-badge">Más popular</div><div class="pack-price" style="margin-top:5px;">350€</div><div class="pack-price-sub">/mes</div></div>
-        </div>
-        <div class="pack-body"><div class="pack-includes">
-          <div class="pack-item" style="color:#F5F0E8">Atención a clientes</div>
-          <div class="pack-item" style="color:#F5F0E8">Gestión de procesos</div>
-          <div class="pack-item" style="color:#F5F0E8">Soporte administrativo</div>
-        </div></div>
-      </div>
-      <div class="pack-card">
-        <div class="pack-header">
-          <div><div class="pack-name">Total</div><div class="pack-subtitle">30h/mes</div></div>
-          <div><div class="pack-price">520€</div><div class="pack-price-sub">/mes</div></div>
-        </div>
-        <div class="pack-body"><div class="pack-includes">
-          <div class="pack-item">Coordinación de proveedores</div>
-          <div class="pack-item">Prioridad en respuesta</div>
-        </div></div>
-      </div>
-    </div>
+
+    <!-- COMBO -->
     <div class="service-grid" id="packs-combo">
       <div class="pack-card">
         <div class="pack-header">
-          <div><div class="pack-name">Combo Esencial</div><div class="pack-subtitle">8h AV + 6 publicaciones/mes</div></div>
+          <div><div class="pack-name">Combo Esencial</div><div class="pack-subtitle">6 publicaciones + edición básica</div></div>
           <div><div class="pack-price">420€</div><div class="pack-price-sub">/mes</div></div>
         </div>
         <div class="pack-body"><div class="pack-includes">
-          <div class="pack-item">Organización + presencia en redes</div>
+          <div class="pack-item">Gestión de redes + edición de vídeo</div>
+          <div class="pack-item">Hasta 4 reels editados</div>
         </div></div>
       </div>
       <div class="pack-card featured">
         <div class="pack-header">
-          <div><div class="pack-name">Combo Profesional</div><div class="pack-subtitle">15h AV + 10 publicaciones/mes</div></div>
+          <div><div class="pack-name">Combo Profesional</div><div class="pack-subtitle">10 publicaciones + edición avanzada</div></div>
           <div style="text-align:right"><div class="pack-badge">Recomendado</div><div class="pack-price" style="margin-top:5px;">650€</div><div class="pack-price-sub">/mes</div></div>
         </div>
         <div class="pack-body"><div class="pack-includes">
-          <div class="pack-item" style="color:#F5F0E8">Soporte operativo completo</div>
-          <div class="pack-item" style="color:#F5F0E8">Visibilidad digital activa</div>
+          <div class="pack-item">Estrategia + contenido + edición</div>
+          <div class="pack-item">Hasta 8 reels editados</div>
+          <div class="pack-item">Informe mensual</div>
         </div></div>
       </div>
       <div class="pack-card">
         <div class="pack-header">
-          <div><div class="pack-name">Combo Integral</div><div class="pack-subtitle">25h AV + 16-20 publicaciones/mes</div></div>
+          <div><div class="pack-name">Combo Integral</div><div class="pack-subtitle">16-20 publicaciones + edición completa</div></div>
           <div><div class="pack-price">620€</div><div class="pack-price-sub">/mes</div></div>
         </div>
         <div class="pack-body"><div class="pack-includes">
-          <div class="pack-item">Delegación completa</div>
+          <div class="pack-item">Delegación completa de redes</div>
+          <div class="pack-item">Edición ilimitada de vídeos</div>
           <div class="pack-item">Atención prioritaria</div>
         </div></div>
       </div>
     </div>
+
+    <p style="font-size:12px;color:var(--gray);font-weight:300;margin-top:1rem;text-align:right;">* Precios indicados no incluyen IVA.</p>
+
     <div class="cta-block">
       <div class="cta-block-title">¿Necesitas algo diferente?</div>
       <p class="cta-block-sub">Si ningún pack encaja exactamente con lo que buscas, cuéntamelo. Preparo presupuestos personalizados sin compromiso.</p>
@@ -294,7 +265,7 @@
     <h2 class="section-title">5 errores que destruyen tu Instagram</h2>
     <p class="section-body">La mayoría de negocios los cometen sin saberlo. Deja tu email y te mando la guía ahora mismo.</p>
     <div id="guia-form" style="margin-top:1.5rem;">
-      <div class="form-group"><label>Tu nombre</label><input type="text" id="g-nombre" placeholder="Elena García" /></div>
+      <div class="form-group"><label>Tu nombre</label><input type="text" id="g-nombre" placeholder="Tu nombre" /></div>
       <div class="form-group"><label>Tu email</label><input type="email" id="g-email" placeholder="hola@tuempresa.com" /></div>
       <button class="btn-submit" onclick="enviarGuia()">Quiero la guía gratis →</button>
       <p style="font-size:11px;color:var(--gray);text-align:center;margin-top:10px;font-weight:300;">Sin spam. Puedes darte de baja cuando quieras.</p>
@@ -319,7 +290,7 @@
         <select id="c-servicio">
           <option value="">Selecciona un servicio</option>
           <option>Community Management</option>
-          <option>Asistente Virtual</option>
+          <option>Edición de vídeo / Reels</option>
           <option>Pack Combinado</option>
           <option>Asesoramiento personalizado</option>
           <option>No lo tengo claro aún</option>

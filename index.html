@@ -282,12 +282,12 @@
     <div class="section-eyebrow">Hablemos</div>
     <h2 class="section-title">Cuéntame tu proyecto</h2>
     <p class="section-body">Sin compromiso. Te respondo en menos de 24h.</p>
-    <div id="contact-form" style="margin-top:1.5rem;">
-      <div class="form-group"><label>Nombre</label><input type="text" id="c-nombre" placeholder="Tu nombre" /></div>
-      <div class="form-group"><label>Email</label><input type="email" id="c-email" placeholder="hola@tuempresa.com" /></div>
+    <form id="contact-form" action="https://formspree.io/f/mwvwvgqb" method="POST" style="margin-top:1.5rem;" onsubmit="return enviarContacto(event)">
+      <div class="form-group"><label>Nombre</label><input type="text" name="nombre" id="c-nombre" placeholder="Tu nombre" required /></div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" id="c-email" placeholder="hola@tuempresa.com" required /></div>
       <div class="form-group">
         <label>¿Qué necesitas?</label>
-        <select id="c-servicio">
+        <select name="servicio" id="c-servicio">
           <option value="">Selecciona un servicio</option>
           <option>Community Management</option>
           <option>Edición de vídeo / Reels</option>
@@ -296,9 +296,9 @@
           <option>No lo tengo claro aún</option>
         </select>
       </div>
-      <div class="form-group"><label>Mensaje</label><textarea id="c-mensaje" placeholder="Cuéntame un poco sobre tu negocio y lo que buscas..."></textarea></div>
-      <button class="btn-submit" onclick="enviarContacto()">Enviar mensaje →</button>
-    </div>
+      <div class="form-group"><label>Mensaje</label><textarea name="mensaje" id="c-mensaje" placeholder="Cuéntame un poco sobre tu negocio y lo que buscas..."></textarea></div>
+      <button type="submit" class="btn-submit">Enviar mensaje →</button>
+    </form>
     <div class="form-success" id="contact-success">
       <div class="form-success-icon"><svg width="22" height="22" fill="none" stroke="#C4622D" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
       <div class="form-success-title">Mensaje recibido</div>
@@ -340,12 +340,25 @@ function enviarGuia() {
   document.getElementById('guia-form').style.display = 'none';
   document.getElementById('guia-success').style.display = 'block';
 }
-function enviarContacto() {
+async function enviarContacto(e) {
+  e.preventDefault();
   const n = document.getElementById('c-nombre').value.trim();
-  const e = document.getElementById('c-email').value.trim();
-  if (!n || !e || !e.includes('@')) { alert('Rellena tu nombre y un email válido.'); return; }
-  document.getElementById('contact-form').style.display = 'none';
-  document.getElementById('contact-success').style.display = 'block';
+  const em = document.getElementById('c-email').value.trim();
+  if (!n || !em || !em.includes('@')) { alert('Rellena tu nombre y un email válido.'); return false; }
+  const form = document.getElementById('contact-form');
+  const data = new FormData(form);
+  try {
+    const res = await fetch('https://formspree.io/f/mwvwvgqb', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('contact-success').style.display = 'block';
+    } else {
+      alert('Algo salió mal. Inténtalo de nuevo.');
+    }
+  } catch(err) {
+    alert('Error de conexión. Inténtalo de nuevo.');
+  }
+  return false;
 }
 </script>
 </body>
